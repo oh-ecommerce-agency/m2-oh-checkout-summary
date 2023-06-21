@@ -5,7 +5,7 @@
   "require": {
     "php": ">=7.4",
     "magento/framework": "*",
-    "magento/module-login-as-customer-assistance": "*",
+    "magento/module-checkout": "*",
     "m2-oh/module-core": "*"
   },
   "license": [
@@ -16,7 +16,7 @@
       "registration.php"
     ],
     "psr-4": {
-      "OH\\LoginAsCustomerAssistance\\": ""
+      "OH\\CheckoutSuccessSummary\\": ""
     }
   }
 }
