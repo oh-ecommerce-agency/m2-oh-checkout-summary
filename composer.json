@@ -1,0 +1,22 @@
+{
+  "name": "m2-oh/module-checkout-summary",
+  "description": "N/A",
+  "type": "magento2-module",
+  "require": {
+    "php": ">=7.4",
+    "magento/framework": "*",
+    "magento/module-login-as-customer-assistance": "*",
+    "m2-oh/module-core": "*"
+  },
+  "license": [
+    "OSL-3.0"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "OH\\LoginAsCustomerAssistance\\": ""
+    }
+  }
+}

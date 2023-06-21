@@ -1,0 +1,26 @@
+<?php
+/** @var  $viewModel \OH\CheckoutSuccessSummary\ViewModel\Success */
+$viewModel = $block->getViewModel();
+?>
+<div class="product-summary">
+    <h2><?= __('Purchased products') ?></h2>
+    <div class="container-products">
+        <?php foreach ($viewModel->getProductSummary() as $product): ?>
+            <div class="product">
+                <div class="img-wrapper">
+                    <img width="80" src="<?= $viewModel->getImage($product->getProductObj()) ?>" alt="<?= __('Product image') ?>">
+                </div>
+                <div class="info">
+                    <?php foreach ($product->getData() as $key => $value): ?>
+                        <?php if ($key != 'product_obj'): ?>
+                            <div class="wrapper <?= $key == 'image' ? 'image' : '' ?>">
+                                <strong class="label"><?= __(ucfirst($key)) ?></strong>: <span
+                                        class="value"><?= $key == 'price' ? $viewModel->getCurrencySymbol() : '' ?><?= $value ?></span>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
